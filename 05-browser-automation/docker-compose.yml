@@ -1,0 +1,15 @@
+services:
+  portal:
+    build: ../shared/mock-portal
+    ports:
+      - "8500:8000"
+
+  automation:
+    build: .
+    environment:
+      BASE_URL: http://portal:8000
+    volumes:
+      - ./output:/output
+    depends_on:
+      portal:
+        condition: service_healthy

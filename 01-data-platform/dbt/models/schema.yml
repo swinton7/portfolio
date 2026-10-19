@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: silver_payments
+    columns:
+      - name: payment_id
+        tests: [unique, not_null]
+      - name: status
+        tests:
+          - accepted_values:
+              arguments:
+                values: [paid, failed, refunded]
+  - name: silver_settlements
+    columns:
+      - name: payment_id
+        tests: [unique, not_null]
+  - name: gold_reconciliation
+    columns:
+      - name: payment_id
+        tests: [unique, not_null]
+      - name: match_status
+        tests:
+          - accepted_values:
+              arguments:
+                values: [matched, amount_mismatch, missing_settlement, orphan_settlement]

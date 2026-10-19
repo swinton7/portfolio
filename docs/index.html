@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suhendro Winton</title>
+<meta name="description" content="Principal Data & AI Platform Engineer — portfolio of runnable data platform projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --ink: #1b1d22; --muted: #5d6270; --line: #e6e3dc;
+    --accent: #1f5f8b; --accent-soft: #e5eef5; --chip: #f1efe9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111316; --surface: #181b20; --ink: #e8e9ec; --muted: #9aa1ad; --line: #2a2f37;
+      --accent: #7db7e0; --accent-soft: #1b2a36; --chip: #20242b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111316; --surface: #181b20; --ink: #e8e9ec; --muted: #9aa1ad; --line: #2a2f37;
+    --accent: #7db7e0; --accent-soft: #1b2a36; --chip: #20242b;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 Inter, system-ui, sans-serif; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 72px 0 40px; border-bottom: 1px solid var(--line); }
+  h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .role { font-size: 1.15rem; color: var(--accent); font-weight: 600; margin: 0 0 16px; }
+  .meta { color: var(--muted); margin: 0 0 20px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .links a { color: var(--ink); text-decoration: none; border: 1px solid var(--line); background: var(--surface);
+             padding: 6px 14px; border-radius: 999px; font-size: 0.92rem; }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 24px; }
+  .summary { font-size: 1.1rem; max-width: 760px; margin: 0; }
+  .projects { display: grid; gap: 20px; }
+  .project { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; }
+  .project-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .project h3 { margin: 0; font-size: 1.2rem; }
+  .num { font-family: "JetBrains Mono", monospace; color: var(--accent); margin-right: 8px; }
+  .project a.code { font-size: 0.9rem; color: var(--accent); text-decoration: none; }
+  .project p { color: var(--muted); margin: 8px 0 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .chip { background: var(--chip); border-radius: 6px; padding: 2px 8px; font-size: 0.8rem; font-family: "JetBrains Mono", monospace; }
+  .diagram { background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px; overflow-x: auto; }
+  .diagram .mermaid { min-width: 520px; text-align: center; }
+  .run { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
+  .jobs { display: grid; gap: 28px; }
+  .job-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; }
+  .job h3 { margin: 0; font-size: 1.05rem; }
+  .when { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+  .tagline { color: var(--muted); font-style: italic; margin: 2px 0 8px; font-size: 0.95rem; }
+  .job ul { margin: 0; padding-left: 20px; }
+  .job li { margin-bottom: 6px; }
+  .skills { display: grid; grid-template-columns: 180px 1fr; gap: 10px 20px; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; color: var(--muted); }
+  footer { padding: 32px 0 56px; color: var(--muted); font-size: 0.9rem; }
+  @media (max-width: 640px) {
+    header { padding-top: 48px; }
+    .skills { grid-template-columns: 1fr; gap: 2px; }
+    .skills dd { margin-bottom: 12px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Suhendro Winton</h1>
+    <p class="role">Principal Data &amp; AI Platform Engineer</p>
+    <p class="meta">Jakarta, Indonesia · Open to relocation or remote work</p>
+    <div class="links">
+      <a href="mailto:suhendro.winton@gmail.com">suhendro.winton@gmail.com</a>
+      <a href="https://www.linkedin.com/in/suhendro-w-1907a4112">LinkedIn</a>
+      <a href="https://github.com/swinton7/portfolio">GitHub · portfolio</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Summary</h2>
+      <p class="summary">Data and AI platform engineer with 9+ years across payments, digital banking, lending and travel, and 3+ years leading a small team. I design AWS and GCP data systems with cost and capacity planned from day one, and stay hands-on across batch and streaming ingestion, warehouses and lakehouses, feature stores, MLOps and LLM/agentic systems.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Runnable projects</h2>
+      <div class="projects">
+
+        <article class="project">
+          <div class="project-head">
+            <h3><span class="num">01</span>Data Platform</h3>
+            <a class="code" href="https://github.com/swinton7/portfolio/tree/main/01-data-platform">View code →</a>
+          </div>
+          <p>A laptop lakehouse. Mock payments and a provider settlement file land in MinIO. dbt-duckdb models them through bronze, silver and gold, then writes a tested payment-vs-settlement reconciliation back to S3 as Parquet.</p>
+          <div class="chips"><span class="chip">MinIO</span><span class="chip">DuckDB</span><span class="chip">dbt</span><span class="chip">Parquet</span></div>
+          <div class="diagram"><pre class="mermaid">
+flowchart LR
+    G["generate.py<br/>mock payments + settlements"] --> RAW[("MinIO<br/>s3://lake/raw")]
+    subgraph DBT["dbt-duckdb"]
+        B["bronze views"] --> S["silver tables"]
+        S --> GR["gold_reconciliation"]
+        S --> GD["gold_daily_merchant_summary"]
+    end
+    RAW --> B
+    GR --> GOLD[("MinIO<br/>s3://lake/gold")]
+    GD --> GOLD
+          </pre></div>
+          <div class="run">$ docker compose up --build</div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3><span class="num">02</span>MLOps</h3>
+            <a class="code" href="https://github.com/swinton7/portfolio/tree/main/02-mlops">View code →</a>
+          </div>
+          <p>Two fraud models are trained and tracked in MLflow. The better one is registered as <code>fraud-detector@champion</code> and served over REST, with Postgres as the backend store and MinIO as the artifact store.</p>
+          <div class="chips"><span class="chip">MLflow</span><span class="chip">scikit-learn</span><span class="chip">Postgres</span><span class="chip">MinIO</span></div>
+          <div class="diagram"><pre class="mermaid">
+flowchart LR
+    T["train.py<br/>2 candidate models"] --> M["MLflow tracking"]
+    M --> PG[("Postgres")]
+    M --> S3[("MinIO artifacts")]
+    T -->|"best PR-AUC → @champion"| REG["Model Registry"]
+    REG --> SV["mlflow models serve"]
+    C["client"] -->|"POST /invocations"| SV
+          </pre></div>
+          <div class="run">$ docker compose up --build</div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3><span class="num">03</span>Realtime Ingestion</h3>
+            <a class="code" href="https://github.com/swinton7/portfolio/tree/main/03-realtime-ingestion">View code →</a>
+          </div>
+          <p>Change data capture without Kafka. Standalone Debezium Server reads the Postgres WAL and POSTs every insert, update and delete to a webhook. The webhook keeps idempotent, realtime aggregates in Redis using hashes, sorted sets and streams.</p>
+          <div class="chips"><span class="chip">Postgres</span><span class="chip">Debezium Server</span><span class="chip">Redis</span><span class="chip">FastAPI</span></div>
+          <div class="diagram"><pre class="mermaid">
+flowchart LR
+    PR["producer"] --> PG[("Postgres<br/>logical WAL")]
+    PG -->|"pgoutput"| DBZ["Debezium Server"]
+    DBZ -->|"HTTP POST per change"| WH["webhook"]
+    WH --> RD[("Redis<br/>hash · zset · stream")]
+    U["GET /stats"] --> WH
+          </pre></div>
+          <div class="run">$ docker compose up --build &amp;&amp; curl localhost:8300/stats</div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3><span class="num">04</span>Web Scraping</h3>
+            <a class="code" href="https://github.com/swinton7/portfolio/tree/main/04-web-scraping">View code →</a>
+          </div>
+          <p>A polite crawler. It follows <code>robots.txt</code> and its crawl delay, retries with backoff, and follows pagination. Raw HTML and parsed JSONL land in MinIO, partitioned by run date.</p>
+          <div class="chips"><span class="chip">requests</span><span class="chip">BeautifulSoup</span><span class="chip">MinIO</span></div>
+          <div class="diagram"><pre class="mermaid">
+flowchart LR
+    S["scraper"] -->|"robots.txt"| P["mock portal"]
+    S -->|"GET ?page=n → Next"| P
+    S --> RAW[("MinIO raw/dt=…")]
+    S --> PARSED[("MinIO parsed/dt=…")]
+          </pre></div>
+          <div class="run">$ docker compose up --build</div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3><span class="num">05</span>Browser Automation</h3>
+            <a class="code" href="https://github.com/swinton7/portfolio/tree/main/05-browser-automation">View code →</a>
+          </div>
+          <p>Automating a portal that has no API. Playwright logs in, asserts each step, downloads the settlement report, and keeps screenshots and a full trace as evidence.</p>
+          <div class="chips"><span class="chip">Playwright</span><span class="chip">headless Chromium</span></div>
+          <div class="diagram"><pre class="mermaid">
+sequenceDiagram
+    participant PW as Playwright
+    participant P as Portal
+    PW->>P: wrong password
+    P-->>PW: error (asserted)
+    PW->>P: log in
+    P-->>PW: /reports (asserted)
+    PW->>P: pick date, Download
+    P-->>PW: settlement CSV
+          </pre></div>
+          <div class="run">$ docker compose up --build</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Experience</h2>
+      <div class="jobs">
+        <div class="job">
+          <div class="job-head"><h3>PayMongo · Senior Data Engineer (Remote)</h3><span class="when">Apr 2025 – Present</span></div>
+          <p class="tagline">Philippine payments platform processing ~10M transactions in H1 2026 (+89% YoY)</p>
+          <ul>
+            <li><strong>Reconciliation Engine</strong>: a zero-touch pipeline that replaced a 5-person, 8+ hour daily process (~10,000 hours a year), maintained by one engineer.</li>
+            <li><strong>Search API (OpenSearch)</strong>: an owned CDC pipeline (DMS → Kinesis → Lambda → OpenSearch) with ~3s end-to-end latency at 40% lower spend.</li>
+            <li><strong>AML Feature Store (Valkey + Lambda)</strong>: a low-latency online feature store designed to a sub-300ms scoring budget.</li>
+            <li><strong>LLM &amp; Agentic Platform</strong>: built on Bedrock AgentCore, MCP and Claude, shipping 10+ automations across 4 divisions.</li>
+            <li><strong>Warehouse &amp; Lakehouse</strong>: Redshift + dbt + Airflow, re-architected for 30% lower cost and 50% faster queries, with 90% of data infrastructure in Terraform.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-head"><h3>Superbank Indonesia · Senior Data Engineer</h3><span class="when">Oct 2023 – Apr 2025</span></div>
+          <p class="tagline">Digital bank backed by Grab, Singtel and Emtek, grown from 0 to 2.5M customers</p>
+          <ul>
+            <li><strong>MLOps (SageMaker)</strong>: the first implementation of the bank's training, deployment and serving platform.</li>
+            <li><strong>Snowflake Migration &amp; RBAC</strong>: moved the PostgreSQL data lake to Snowflake with dbt on a Medallion architecture, and automated RBAC.</li>
+            <li><strong>MSK → Snowflake ingestion</strong>: removed lossy hops and brought data quality to 100%.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-head"><h3>Traveloka · Senior Data Engineer, Financial Services</h3><span class="when">Jun 2021 – Oct 2023</span></div>
+          <p class="tagline">Southeast Asia's largest travel and lifestyle platform</p>
+          <ul>
+            <li>Interim Data Engineering Manager twice, sustaining delivery while headcount halved.</li>
+            <li>BigQuery cost optimisation, with per-person query-cost attribution across 30–40+ users.</li>
+            <li>Placed 2nd in the company hackathon with Traveloka's first hotel-room embeddings, built over 1.8M+ accommodation partners and taken to production.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job-head"><h3>Earlier</h3><span class="when">2017 – 2021</span></div>
+          <ul>
+            <li>Verihubs, Founding Engineer &amp; Team Lead (KYC and identity verification)</li>
+            <li>Independent KYC startup founder (Amazon Rekognition and Textract reseller)</li>
+            <li>JULO, Data Engineer: scaled acquisition pipelines 10x and cut transformation runtime from 5 days to 30 minutes</li>
+            <li>Volantech &amp; freelance, Software Engineer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Cloud</dt><dd>AWS (Redshift, OpenSearch, DMS, Kinesis, MSK, Lambda, Glue, AppFlow, Athena, S3 Tables, Valkey, SageMaker, Bedrock AgentCore), GCP (BigQuery, Bigtable, Dataflow, Pub/Sub, Cloud Run), Snowflake, Databricks</dd>
+        <dt>Data Engineering</dt><dd>Batch &amp; streaming, CDC, API, dbt, Spark, DuckDB, Iceberg, Medallion modelling, SaaS ingestion (HubSpot, Intercom)</dd>
+        <dt>Orchestration &amp; Infra</dt><dd>Airflow, Windmill, Terraform, Kubernetes, Docker, GitLab CI, GitHub CI</dd>
+        <dt>ML &amp; AI</dt><dd>MLOps (training, deployment, serving), MLflow, feature stores, vector embeddings, PyTorch, TensorFlow, Claude, MCP, LLM skills, agentic systems</dd>
+        <dt>Languages</dt><dd>Python, SQL, Bash</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Education &amp; Publications</h2>
+      <div class="jobs">
+        <div class="job">
+          <div class="job-head"><h3>Bina Nusantara University · B.Sc. Computer Science (GPA 3.63 / 4.00)</h3><span class="when">2014 – 2018</span></div>
+        </div>
+        <div class="job">
+          <div class="job-head"><h3>Georgia Institute of Technology · OMSCS (withdrawn)</h3><span class="when">2024 – 2025</span></div>
+          <p class="tagline">Completed 4 graduate courses: Machine Learning, Deep Learning, ML for Trading, AI Ethics</p>
+        </div>
+        <div class="job">
+          <div class="job-head"><h3>Three peer-reviewed papers</h3></div>
+          <p class="tagline">Argumentation mining and motion-aware claim generation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Every project above runs locally with Docker. Source: <a href="https://github.com/swinton7/portfolio">github.com/swinton7/portfolio</a></div>
+</footer>
+
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs";
+  const dark = document.documentElement.dataset.theme === "dark" ||
+    (document.documentElement.dataset.theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+  mermaid.initialize({ startOnLoad: true, theme: dark ? "dark" : "neutral", fontFamily: "Inter, sans-serif" });
+</script>
+</body>
+</html>

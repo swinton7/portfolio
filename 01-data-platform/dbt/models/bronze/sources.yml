@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    tables:
+      - name: payments
+        meta:
+          external_location: "read_parquet('s3://lake/raw/payments/*/*.parquet', hive_partitioning = true)"
+      - name: settlements
+        meta:
+          external_location: "read_csv('s3://lake/raw/settlements/*.csv', header = true)"

@@ -1,0 +1,4 @@
+__pycache__/
+.DS_Store
+05-browser-automation/output/*
+!05-browser-automation/output/.gitkeep

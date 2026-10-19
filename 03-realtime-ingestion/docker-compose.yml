@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    command: postgres -c wal_level=logical
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: shop
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "shop"]
+      interval: 3s
+      retries: 20
+
+  redis:
+    image: redis:7.4-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      retries: 20
+
+  webhook:
+    build: ./webhook
+    ports:
+      - "8300:8000"
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  debezium:
+    image: quay.io/debezium/server:3.6.2.Final
+    volumes:
+      - ./debezium/application.properties:/debezium/config/application.properties:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      webhook:
+        condition: service_healthy
+
+  producer:
+    build: ./producer
+    depends_on:
+      - debezium
