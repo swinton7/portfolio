@@ -1,6 +1,6 @@
 # Suhendro Winton — Data & AI Platform Portfolio
 
-Five small, runnable projects. Each one shows the core abilities of a platform I use day to day. Each runs on its own with `docker compose up --build`, needs no cloud account, and has a diagram and expected output in its README.
+Six small, runnable projects. Each one shows the core abilities of a platform I use day to day. Each runs on its own with `docker compose up --build` (06 also needs [Ollama](https://ollama.com) on the host), needs no cloud account, and has a diagram and expected output in its README.
 
 **Site:** https://swinton7.github.io/portfolio · **LinkedIn:** [suhendro-w-1907a4112](https://www.linkedin.com/in/suhendro-w-1907a4112) · **Email:** suhendro.winton@gmail.com
 
@@ -11,6 +11,7 @@ Five small, runnable projects. Each one shows the core abilities of a platform I
 | 03 | [Realtime Ingestion](03-realtime-ingestion) | Postgres · Debezium Server · Redis · FastAPI | Kafka-less CDC over an HTTP webhook, idempotent realtime aggregates |
 | 04 | [Web Scraping](04-web-scraping) | requests · BeautifulSoup · MinIO | polite paginated crawling, raw + parsed landing zones |
 | 05 | [Browser Automation](05-browser-automation) | Playwright | login, assertions, file download, screenshots + trace evidence |
+| 06 | [RAG](06-rag) | Postgres · pgvector · Ollama · FastAPI | symptom → possible conditions over MedlinePlus, hybrid search with RRF, cited answers, retrieval + grounding eval |
 
 ```mermaid
 flowchart LR

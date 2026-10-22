@@ -1,0 +1,21 @@
+# Each case passes when any of `expected` (MedlinePlus topic titles) shows up.
+- symptoms: high fever, severe headache, pain behind the eyes, joint and muscle pain, rash
+  expected: [Dengue]
+- symptoms: always thirsty, urinating a lot, losing weight without trying, blurry vision
+  expected: [Diabetes, Diabetes Type 1, Diabetes Type 2]
+- symptoms: thick red patches of skin covered with silvery scales that itch
+  expected: [Psoriasis]
+- symptoms: wheezing, coughing at night, chest tightness, shortness of breath
+  expected: [Asthma]
+- symptoms: burning pain when urinating, strong urge to urinate often, cloudy urine
+  expected: [Urinary Tract Infections]
+- symptoms: painful blistering rash on one side of the body, had chickenpox as a child
+  expected: [Shingles]
+- symptoms: sudden intense pain in the big toe joint, red and swollen
+  expected: [Gout]
+- symptoms: cough lasting weeks, coughing up blood, night sweats, weight loss
+  expected: [Tuberculosis]
+- symptoms: sudden numbness on one side of the face, slurred speech, trouble walking
+  expected: [Stroke, Ischemic Stroke, Hemorrhagic Stroke, Transient Ischemic Attack]
+- symptoms: pain starting near the belly button that moves to the lower right abdomen, nausea, fever
+  expected: [Appendicitis]

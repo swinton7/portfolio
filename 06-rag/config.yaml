@@ -1,0 +1,47 @@
+ollama_url: http://host.docker.internal:11434
+embed_model: nomic-embed-text
+chat_model: qwen3.5:2b
+
+database_url: postgresql://postgres:postgres@postgres:5432/rag
+
+snapshot:
+  index_url: https://medlineplus.gov/xml.html
+  path: /data/conditions.jsonl
+  drop_if_any_group:
+    - Symptoms
+  non_condition_groups:
+    - Children and Teenagers
+    - Complementary and Alternative Therapies
+    - Diagnostic Tests
+    - Disasters
+    - Drug Therapy
+    - Fitness and Exercise
+    - Food and Nutrition
+    - Health System
+    - Men
+    - Older Adults
+    - Personal Health Issues
+    - Population Groups
+    - Pregnancy and Reproduction
+    - Safety Issues
+    - Social/Family Issues
+    - Surgery and Rehabilitation
+    - Transplantation and Donation
+    - Wellness and Lifestyle
+    - Women
+
+chunking:
+  max_chars: 1200
+
+generation:
+  num_predict: 1024
+
+retrieval:
+  candidates: 20
+  rrf_k: 60
+  top_k: 8
+
+disclaimer: >-
+  Not medical advice. This is a portfolio demo that searches MedlinePlus summaries;
+  see a doctor for any health concern.
+attribution: "Source: MedlinePlus, National Library of Medicine"

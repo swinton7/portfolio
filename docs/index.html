@@ -190,6 +190,25 @@ sequenceDiagram
           <div class="run">$ docker compose up --build</div>
         </article>
 
+        <article class="project">
+          <div class="project-head">
+            <h3><span class="num">06</span>RAG</h3>
+            <a class="code" href="https://github.com/swinton7/portfolio/tree/main/06-rag">View code →</a>
+          </div>
+          <p>Describe symptoms, get possible conditions cited to MedlinePlus. Hybrid search (pgvector + Postgres full-text, merged with reciprocal rank fusion) feeds a small local LLM that answers only from the retrieved excerpts. An eval job scores retrieval hits and grounding. Not medical advice.</p>
+          <div class="chips"><span class="chip">pgvector</span><span class="chip">Ollama</span><span class="chip">nomic-embed-text</span><span class="chip">qwen3.5</span><span class="chip">FastAPI</span></div>
+          <div class="diagram"><pre class="mermaid">
+flowchart LR
+    ML["MedlinePlus"] --> ING["ingest<br/>chunk + hash + embed"]
+    ING --> PG[("pgvector + tsvector")]
+    U["POST /ask"] --> API["FastAPI"]
+    API -->|"hybrid search, RRF"| PG
+    API -->|"top 8 excerpts"| LLM["qwen3.5:2b"]
+    LLM -->|"cited conditions"| U
+          </pre></div>
+          <div class="run">$ docker compose up --build &amp;&amp; docker compose run --rm eval</div>
+        </article>
+
       </div>
     </div>
   </section>
